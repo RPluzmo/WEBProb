@@ -1,0 +1,82 @@
+.welcome-hero {
+    position: relative;
+    width: 100%;
+    min-height: 72vh;
+    border-radius: 14px;
+    overflow: hidden;
+    margin-bottom: 22px;
+}
+
+.welcome-hero-image {
+    width: 100%;
+    height: 72vh;
+    object-fit: cover;
+    display: block;
+}
+
+.welcome-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.20));
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 36px;
+    color: #fff;
+}
+
+.welcome-hero-overlay h1 {
+    margin: 0;
+    font-size: clamp(30px, 4vw, 52px);
+    line-height: 1.08;
+}
+
+.welcome-hero-overlay p {
+    margin: 0;
+    font-size: clamp(16px, 1.4vw, 21px);
+    max-width: 900px;
+    opacity: 0.95;
+}
+
+.welcome-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+.welcome-card h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.welcome-card p,
+.welcome-card li {
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+.welcome-card ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+@media (max-width: 980px) {
+    .welcome-content {
+        grid-template-columns: 1fr;
+    }
+
+    .welcome-hero-image {
+        height: 56vh;
+    }
+
+    .welcome-hero {
+        min-height: 56vh;
+    }
+
+    .welcome-hero-overlay {
+        padding: 20px;
+    }
+}

@@ -1,0 +1,280 @@
+:root {
+    --primary-color: #c62828;
+    --primary-dark: #8e1d1d;
+    --muted-text: #6b7280;
+    --bg-color: #f3f4f6;
+    --surface: #ffffff;
+    --border-color: #e5e7eb;
+    --success-bg: #d1fae5;
+    --success-text: #065f46;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family:  sans-serif;
+    font-size: 20px;
+    background: #f7f7f7;
+}
+
+a {
+    color: #c62828;
+    text-decoration: none;
+}
+
+ul {
+     list-style: none;
+}
+
+.page-main {
+    width: 100%;
+    max-width: 1680px;
+    margin: 0 auto;
+    padding: 20px 28px;
+}
+
+.site-header {
+    background: var(--surface);
+    border-bottom: 4px solid var(--primary-color);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 20;
+}
+
+.site-nav {
+    width: 100%;
+    max-width: 1680px;
+    margin: 0 auto;
+    padding: 14px 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 14px;
+}
+
+.nav-left,
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.nav-link {
+    font-weight: 700;
+    padding: 10px 14px;
+    border-radius: 8px;
+}
+
+.nav-link:hover {
+    background: #f9d6d6;
+    color: var(--primary-dark);
+}
+
+.nav-date {
+    font-weight: 700;
+    color: var(--muted-text);
+    padding: 7px 12px;
+    border-radius: 8px;
+    background: #f3f4f6;
+    border: 1px solid var(--border-color);
+    white-space: nowrap;
+}
+
+.btn {
+    border: none;
+    border-radius: 8px;
+    background: var(--primary-color);
+    color: #fff;
+    padding: 11px 16px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: var(--primary-dark);
+}
+
+.btn-secondary {
+    background: #334155;
+}
+
+.btn-secondary:hover {
+    background: #1e293b;
+}
+
+
+
+.card {
+    background: var(--surface);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 18px;
+}
+
+.success-banner {
+    background: var(--success-bg);
+    color: var(--success-text);
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 14px;
+}
+
+.form-grid {
+    display: grid;
+    gap: 12px;
+}
+
+label {
+    font-weight: 600;
+    display: block;
+    margin-bottom: 6px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+input[type="time"],
+select,
+textarea {
+    width: 100%;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 16px;
+    background: #fff;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid #fecaca;
+    border-color: var(--primary-color);
+}
+
+.table-wrap {
+    overflow-x: auto;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--surface);
+}
+
+.data-table th {
+    text-align: left;
+    background: var(--primary-color);
+    color: #fff;
+    padding: 11px;
+    font-size: 15px;
+}
+
+.data-table td {
+    padding: 11px;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: middle;
+}
+
+.avatar-sm {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #fff;
+    box-shadow: 0 0 0 1px var(--border-color);
+}
+
+.avatar-lg {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #fff;
+    box-shadow: 0 0 0 1px var(--border-color);
+}
+
+.avatar-fallback {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #e5e7eb;
+    color: #374151;
+    font-weight: 700;
+}
+
+.profile-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+}
+
+.profile-form {
+    max-width: 980px;
+}
+
+/* Lightbox */
+.lightbox-trigger {
+    cursor: zoom-in;
+}
+
+.lightbox-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(17, 24, 39, 0.86);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    z-index: 9999;
+}
+
+.lightbox-overlay.is-open {
+    display: flex;
+}
+
+.lightbox-content {
+    max-width: min(96vw, 1700px);
+    max-height: 92vh;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.45);
+    background: #111827;
+}
+
+.lightbox-image {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    max-height: 92vh;
+    object-fit: contain;
+}
+
+@media (max-width: 960px) {
+    .site-nav {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+        padding: 12px 14px;
+    }
+
+    .nav-left,
+    .nav-right {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .page-main {
+        padding: 12px;
+    }
+
+    .btn {
+        padding: 10px 12px;
+        font-size: 14px;
+    }
+}

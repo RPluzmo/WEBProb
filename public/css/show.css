@@ -1,0 +1,97 @@
+.track-top {
+    display: grid;
+    grid-template-columns: 1.7fr 1fr;
+    gap: 16px;
+    margin-bottom: 18px;
+}
+
+.track-cover {
+    width: 100%;
+    max-height: 560px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.track-gallery {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.track-gallery-item {
+    position: relative;
+}
+
+.track-gallery-img {
+    width: 100%;
+    height: 270px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.manage-panel {
+    margin-bottom: 14px;
+}
+
+.manage-panel[hidden] {
+    display: none !important;
+}
+
+.manage-toggle {
+    margin-bottom: 10px;
+}
+
+.track-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 16px;
+}
+
+.club-block {
+    border-top: 1px solid var(--border-color);
+    padding-top: 12px;
+    margin-top: 12px;
+}
+
+.club-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.club-logo {
+    width: 72px;
+    height: 72px;
+    object-fit: contain;
+    border-radius: 10px;
+    background: #fff;
+    border: 1px solid var(--border-color);
+    padding: 6px;
+}
+
+.event-list,
+.rider-list {
+    margin: 8px 0 0;
+    padding-left: 18px;
+}
+
+.meta-list {
+    margin: 0;
+    padding-left: 18px;
+}
+
+@media (max-width: 1200px) {
+    .track-top,
+    .track-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .track-gallery {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .track-gallery-img {
+        height: 220px;
+    }
+}
